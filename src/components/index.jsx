@@ -24,8 +24,8 @@ class App extends Component {
         let form = e.target,
             course = {
                 id: form.id.value,
-                name: form.name.value,
-                teacher: form.teacher.value
+                name: (form.name.value) ? form.name.value : App.defaultProps.name,
+                teacher: (form.teacher.value) ? form.name.value : App.defaultProps.teacher
             }
 
         this.setState({
@@ -51,10 +51,13 @@ class App extends Component {
 }
 
 App.propTypes = {
-    id:PropTypes.number.isRequired,
+    id:PropTypes.number,
     name: PropTypes.string.isRequired,
     teacher: PropTypes.string.isRequired
 };
-App.defaultProps = {};
+App.defaultProps = {
+    name: 'Curso Desconocido',
+    teacher: 'Profesor No Asignado'
+};
 
 export default App
