@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import CoursesList from "./CoursesList";
 import CourseAddForm from "./CourseAddForm";
+import DemoCarousel from "./DemoCarousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 
 
 class App extends Component {
@@ -37,6 +40,7 @@ class App extends Component {
     render() {
         return (
             <div>
+                <DemoCarousel />
                 <CourseAddForm
                     onAddCourse={this.handleOnAddCourse}
                 />
@@ -51,7 +55,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-    id:PropTypes.number,
+    id: PropTypes.number,
     name: PropTypes.string.isRequired,
     teacher: PropTypes.string.isRequired
 };
