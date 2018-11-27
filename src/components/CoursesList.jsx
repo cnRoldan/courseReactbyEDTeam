@@ -2,7 +2,7 @@ import React from "react";
 import Course from "./Course";
 
 const CoursesList = (props) => (
-    <ul>
+    <ul className="course-list">
         {
             props.courses.map(course => (
                 <Course
