@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CoursesList from "./CoursesList";
 import CourseAddForm from "./CourseAddForm";
 import DemoCarousel from "./DemoCarousel";
+import ButtonAppBar from './AppBar';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
@@ -40,6 +41,7 @@ class App extends Component {
     render() {
         return (
             <div>
+                <ButtonAppBar/>
                 <DemoCarousel />
                 <CourseAddForm
                     onAddCourse={this.handleOnAddCourse}
