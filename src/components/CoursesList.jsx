@@ -1,6 +1,7 @@
 import React from "react";
 import Course from "./Course";
 
+
 const CoursesList = (props) => (
     <ul className="course-list">
         {
@@ -10,6 +11,7 @@ const CoursesList = (props) => (
                     id={course.id}
                     name={course.name}
                     teacher={course.teacher}
+                    done={course.done}
                 />
             ))
         }

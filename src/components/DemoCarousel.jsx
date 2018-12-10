@@ -5,22 +5,22 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 export default class DemoCarousel extends Component {
     render() {
         return (
-            <Carousel infiniteLoop height="300" autoPlay dynamicHeight>
+            <Carousel infiniteLoop autoPlay showStatus={false} showIndicators={false} showThumbs={false} height={300} axis={"vertical"}>
                 <div>
-                    <img src="https://i.imgur.com/REM4kQU.jpg" alt=''/>
+                    <img src="https://i.imgur.com/REM4kQU.jpg" alt='Imagen no encontrada' className="imagen-carousel"/>
                     <p className="legend">Atardecer en Venecia</p>
                 </div>
                 <div>
-                    <img src="https://images2.alphacoders.com/692/thumb-1920-692059.jpg" alt=''/>
+                    <img src="https://images2.alphacoders.com/692/thumb-1920-692059.jpg" alt='Imagen no encontrada' className="imagen-carousel"/>
                     <p className="legend">La Alhambra, Granada, Spain</p>
                 </div>
                 <div>
-                    <img src="https://es.best-wallpaper.net/wallpaper/3840x2160/1702/London-night-view-Tower-Bridge-Thames-River-city-lights-UK_3840x2160.jpg" alt='' />
+                    <img src="https://pontosturisticos.net/wp-content/uploads/2017/11/pontos-turisticos-inglaterra-833x474.jpg" alt='Imagen no encontrada' className="imagen-carousel"/>
                     <p className="legend">Panorámica de Londres</p>
                 </div>
                 <div>
-                    <img src="https://wallpapertag.com/wallpaper/full/1/1/6/234815-popular-apple-wallpapers-1920x1080.jpg" alt='' />
-                    <p className="legend">Wallpaper de la marca Apple Inc.</p>
+                    <img src="https://images.wallpaperscraft.com/image/zurich_switzerland_roofs_buildings_sky_97247_3840x2160.jpg" alt='Imagen no encontrada' className="imagen-carousel"/>
+                    <p className="legend">Zürich, 2008</p>
                 </div>
             </Carousel>
         );

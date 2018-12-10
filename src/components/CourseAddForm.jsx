@@ -1,22 +1,26 @@
 import React from 'react';
+import uid from 'uid';
+import Tooltip from '@material-ui/core/Tooltip';
 
 
 const CourseAddForm = (props) => (
-    // <form onSubmit={props.onAddCourse} class="form-add">
-    // <input type="text" placeholder="Nombre del Curso" name="name" />
-    // <input type="text" placeholder="Profesor" name="teacher" />
-    // <input type="submit" value="Guardar" class="submit-button" />
 
-    <div className="form-style-6">
+    <div className="form-group">
         <h1>Añadir Curso</h1>
-        <form onSubmit={props.onAddCourse} className="form-add">
-            <input type="text" name="name" placeholder="Nombre del Curso" />
-            <input type="text" name="teacher" placeholder="Profesor" />
-            <input type="hidden" name="id" value={Math.floor(Math.random() * 100)} />
-            <input type="submit" value="Guardar" />
-        </form>
+        <div className="form-add">
+            <form onSubmit={props.onAddCourse} className="form-add">
+                <input type="text" name="name" placeholder="Nombre del Curso" />
+                <input type="text" name="teacher" placeholder="Profesor" />
+                <input type="hidden" name="id" value={uid(10)} />
+                <Tooltip title="Guardar un curso" aria-label="Guardar un curso">
+                    <input type="submit" value="GUARDAR" className="button-awesome" />
+                </Tooltip>
+            </form>
+            {!props.courses.length ?
+                <button onClick={props.onLoadCourses} className="button-awesome"> Cargar cursos</button> :
+                <button onClick={props.onResetCourses} className="button-awesome"> Borrar cursos</button>}
+        </div>
     </div>
-    // </form>
 );
 
 export default CourseAddForm;
